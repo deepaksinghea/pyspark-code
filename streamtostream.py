@@ -9,6 +9,7 @@ if __name__ == "__main__":
         .master("local[*]") \
         .appName("Stream Stream Example") \
         .config("spark.streaming.stopGracefullyOnShutdown", "true") \
+        .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.0") \
         .config("spark.sql.shuffle.partitions", 2) \
         .getOrCreate()
 
