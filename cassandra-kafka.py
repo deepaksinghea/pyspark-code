@@ -18,6 +18,7 @@ if __name__ == "__main__":
         .appName("Cassandra Kafka Example") \
         .config("spark.streaming.stopGracefullyOnShutdown", "true") \
         .config("spark.sql.shuffle.partitions", 2) \
+        .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.0") \
         .config("spark.cassandra.connection.host", "localhost") \
         .config("spark.cassandra.connection.port", "9042") \
         .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions") \
